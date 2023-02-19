@@ -84,6 +84,8 @@ document.getElementById('decreaseForm').addEventListener('submit', (e) => {
 
   // dispatch action
   store.dispatch(decrement(decrementValueInNumber));
+  // condition: if decrement value grater than result
+  if(result.innerText < 0) return result.innerText = 0;
 
   // reset
   document.getElementById('decrement').value = '';
