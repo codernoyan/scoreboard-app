@@ -70,10 +70,21 @@ document.getElementById('increaseForm').addEventListener('submit', (e) => {
   const incrementValue = document.getElementById('increment').value;
   const incrementValueInNumber = parseInt(incrementValue);
 
+  // dispatch action
+  store.dispatch(increment(incrementValueInNumber));
+  // reset
+  document.getElementById('increment').value = '';
+
 });
 document.getElementById('decreaseForm').addEventListener('submit', (e) => {
   e.preventDefault();
   // action elements
   const decrementValue = document.getElementById('decrement').value;
   const decrementValueInNumber = parseInt(decrementValue);
+
+  // dispatch action
+  store.dispatch(decrement(decrementValueInNumber));
+
+  // reset
+  document.getElementById('decrement').value = '';
 });
