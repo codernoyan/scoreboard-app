@@ -25,7 +25,7 @@
             </div>
         </header>
         <!-- matches  -->
-        <div class="all-matches container">
+        <div id="container" class="all-matches container">
             <!-- Each form tag is Each row, This will render multiple times on Clicking 'Add Another Match' -->
             <div class="match">
                 <div class="wrapper">
@@ -37,7 +37,7 @@
                 <div class="inc-dec">
                     <form id="increaseForm" class="incrementForm">
                         <h4>Increment</h4>
-                        <input id="increment" type="number" name="increment" class="lws-increment" />
+                        <input onkeyup="this" id="increment" type="number" name="increment" class="lws-increment" />
                     </form>
                     <form id="decreaseForm" class="decrementForm">
                         <h4>Decrement</h4>
