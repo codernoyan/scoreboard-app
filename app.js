@@ -47,7 +47,7 @@ const matchInitialSate = [
   {
     id: 1,
     matchCount: 1,
-    value: 120,
+    value: 0,
   },
 ];
 
