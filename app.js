@@ -121,7 +121,7 @@ const render = () => {
                     </form>
                     <form onsubmit="handleDecrease(event, ${match.id})" class="decrementForm">
                         <h4>Decrement</h4>
-                        <input id="decrement" type="number" name="decrement" class="lws-decrement" />
+                        <input type="number" name="decrement" class="lws-decrement" />
                     </form>
                 </div>
                 <div class="numbers">
