@@ -1,14 +1,8 @@
-// delete button
-const deleteButton = document.getElementById('delete-button');
-
 // add another 
 const addAnotherButton = document.getElementById('add-another');
 
 // reset button
 const resetButton = document.getElementById('reset-button');
-
-// result
-const result = document.getElementById('result');
 
 // action identifier
 const INCREMENT = 'increment';
@@ -25,7 +19,7 @@ const increment = (id, value) => {
       value,
     }
   }
-}
+};
 
 const decrement = (id, value) => {
   return {
@@ -41,9 +35,9 @@ const reset = () => {
   return {
     type: RESET
   }
-}
+};
 
-const matchInitialSate = [
+const initialState = [
   {
     id: 1,
     matchCount: 1,
@@ -51,7 +45,8 @@ const matchInitialSate = [
   },
 ];
 
-const addMatchReducer = (state = matchInitialSate, action) => {
+// reducer function
+const addMatchReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADDMATCH:
       return [
@@ -59,7 +54,7 @@ const addMatchReducer = (state = matchInitialSate, action) => {
         {
           id: state.length + 1,
           matchCount: state.length + 1,
-          value: 0
+          value: 0,
         },
       ];
     case INCREMENT:
@@ -83,7 +78,7 @@ const addMatchReducer = (state = matchInitialSate, action) => {
       })
       return newDecrementValue;
     case RESET:
-      const resetValue = [...state];
+      const resetValue = [...state]
       resetValue.forEach((match) => {
         return match.value = 0;
       })
@@ -99,6 +94,8 @@ const state = store.getState();
 // result.innerText = state[0].value
 // render
 const matchContainer = document.getElementById('container');
+
+// render function
 const render = () => {
   const state = store.getState();
   console.log(state);
